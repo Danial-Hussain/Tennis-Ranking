@@ -37,7 +37,11 @@ function play_doubles_tournament(;
 
     # Add players to a tournament
     while playersLeft > 0 && index <= length(players)
-        if rand() <= participationProbability(players[index], tournament)
+        if rand() <= participationProbability(
+            player = players[index], 
+            tournament = tournament, 
+            ranking_scheme = ranking_scheme
+        )
             players[index].tournaments_played += 1
             push!(participants, players[index])
             playersLeft -= 1;
