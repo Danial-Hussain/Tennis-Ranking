@@ -25,3 +25,6 @@ Manifest.toml
 
 # Notes file
 notes/
+
+# Jupyter
+.ipynb_checkpoints
