@@ -3,7 +3,8 @@
         team1::Team,
         team2::Team,
         tournament::Tournament,
-        round::Int64
+        round::Int64,
+        strength_method::String
     )::Team
 
 Simulates a doubles match between two teams.
@@ -16,13 +17,19 @@ Arguments
     a team composed of two players.
 - `tournament`
     the tournament in which this match is taking place.
+- `round`
+    the current round number of the tournament
+- `strength_method`
+    the method to use to determine the probability of team 1
+    beating team 2.
 """
 
 function play_doubles_match(
     team1::Team,
     team2::Team,
     tournament::Tournament,
-    round::Int64
+    round::Int64,
+    strength_method::String
 )::Team
     for players in [(team1.player1, team1.player2), (team2.player1, team2.player2)]
         players[1].matches_played += 1
@@ -49,7 +56,7 @@ function play_doubles_match(
         end
     end
 
-    if rand() <= probabilityOfWinning(team1, team2)
+    if rand() <= probabilityOfWinning(team1, team2, strength_method)
         winner = team1        
     else
         winner = team2

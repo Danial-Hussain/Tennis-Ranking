@@ -1,13 +1,5 @@
-module Types
-
 import Dates
 using Dates
-
-export DoublesMatchPlayerSummary
-export DoublesTournamentPlayerSummary
-export Player
-export Team
-export Tournament
 
 """
     mutable struct DoublesMatchPlayerSummary
@@ -171,7 +163,8 @@ Fields
 
 mutable struct Player
     id::Int64
-    rankings::Dict{String,Int}
+    age::Int64
+    rankings::Dict{String,Float64}
     matches_played::Int128
     tournaments_played::Int128
     doubles_results::Dict{String,DoublesTournamentPlayerSummary}
@@ -182,6 +175,7 @@ mutable struct Player
         ranking_schemes::Vector{String},
     )
         id = id
+        age = -1
         matches_played = 0
         tournaments_played = 0
         doubles_results = Dict{String,DoublesTournamentPlayerSummary}()
@@ -194,6 +188,7 @@ mutable struct Player
         end
         return new(
             id,
+            age,
             rankings,
             matches_played,
             tournaments_played,
@@ -224,7 +219,7 @@ Fields
 mutable struct Team
     player1::Player
     player2::Player
-    ranking::Int64
+    ranking::Float64
     function Team(player1::Player, player2::Player, ranking_scheme::String)
         player1 = player1
         player2 = player2
@@ -290,6 +285,4 @@ mutable struct Tournament
         id = string(name, "_", Dates.format(date, "yyyy-mm-dd"))
         return new(id, name, date, type, drawsize)
     end
-end
-
 end

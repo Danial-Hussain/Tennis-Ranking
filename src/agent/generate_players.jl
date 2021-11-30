@@ -1,9 +1,10 @@
 using Random
 
 """
-    function generate_players(
+    function generate_players(;
         dataset_size::Int64,
-        ranking_schemes::Vector{String}
+        ranking_schemes::Vector{String},
+        verbose::Bool
     )::Vector{Player}
 
 Generates an array of players. 
@@ -14,11 +15,14 @@ Arguments
     the number of players to create.
 - `ranking_schemes`:
     the ranking algorithms that will be applied.
+- `verbose`:
+    conditional on whether to print results.
 """
 
-function generate_players(
+function generate_players(;
     dataset_size::Int64,
     ranking_schemes::Vector{String},
+    verbose::Bool
 )::Vector{Player}
     players = Vector{Player}([])
     burn_in_rankings = shuffle!(Vector{Int64}(collect(1:dataset_size)))
@@ -32,6 +36,13 @@ function generate_players(
             ranking_schemes = ranking_schemes,
         )
         push!(players, p)
+    end
+    if verbose
+        players_count = length(players)
+        println("########")
+        println("Vector of $players_count created.")
+        println("########")
+        println()
     end
     return players
 end

@@ -63,20 +63,17 @@ function generate_doubles_tournaments(
                     date = Date(2018, 1, 15),
                     type = "Grandslam",
                     drawsize = 64
-                ),
-                Tournament(
+                ),Tournament(
                     name = "Roland Garros",
                     date = Date(2018, 5, 27),
                     type = "Grandslam",
                     drawsize = 64
-                ),
-                Tournament(
+                ),Tournament(
                     name = "Wimbledon",
                     date = Date(2018, 7, 2),
                     type = "Grandslam",
                     drawsize = 64
-                ),
-                Tournament(
+                ),Tournament(
                     name = "US Open",
                     date = Date(2018, 8, 27),
                     type = "Grandslam",
@@ -92,55 +89,47 @@ function generate_doubles_tournaments(
             [
                 Tournament(
                     name = "Indian Wells Masters",
-                    date = Date(2018, 3, 8),
+                    date = Date(2018, 3, 9),
                     type = "ATP1000",
                     drawsize = 32
-                ),
-                Tournament(
+                ),Tournament(
                     name = "Miami Open",
-                    date = Date(2018, 3, 21),
+                    date = Date(2018, 3, 23),
                     type = "ATP1000",
                     drawsize = 32
-                ),
-                Tournament(
+                ),Tournament(
                     name = "Monte-Carlo Masters",
-                    date = Date(2018, 4, 15),
+                    date = Date(2018, 4, 13),
                     type = "ATP1000",
                     drawsize = 32 # not accurate | reality - 24
-                ),
-                Tournament(
+                ),Tournament(
                     name = "Madrid Open",
-                    date = Date(2018, 5, 6),
+                    date = Date(2018, 5, 4),
                     type = "ATP1000",
                     drawsize = 32 # not accurate | reality - 24
-                ),
-                Tournament(
+                ),Tournament(
                     name = "Italian Open",
-                    date = Date(2018, 5, 13),
+                    date = Date(2018, 5, 11),
                     type = "ATP1000",
                     drawsize = 32 # not accurate | reality - 24
-                ),
-                Tournament(
+                ),Tournament(
                     name = "Canadian Open",
-                    date = Date(2018, 8, 6),
+                    date = Date(2018, 8, 10),
                     type = "ATP1000",
                     drawsize = 32 # not accurate | reality - 24
-                ),
-                Tournament(
+                ),Tournament(
                     name = "Cincinnati Masters",
-                    date = Date(2018, 8, 12),
+                    date = Date(2018, 8, 17),
                     type = "ATP1000",
                     drawsize = 32 # not accurate | reality - 24
-                ),
-                Tournament(
+                ),Tournament(
                     name = "Shanghai Masters",
-                    date = Date(2018, 10, 7),
+                    date = Date(2018, 10, 12),
                     type = "ATP1000",
                     drawsize = 32 # not accurate | reality - 24
-                ),
-                Tournament(
+                ),Tournament(
                     name = "Paris Masters",
-                    date = Date(2018, 10, 29),
+                    date = Date(2018, 11, 2),
                     type = "ATP1000",
                     drawsize = 32 # not accurate | reality - 24
                 )
@@ -154,79 +143,67 @@ function generate_doubles_tournaments(
             [
                 Tournament(
                     name = "Rotterdam Open",
-                    date = Date(2018, 3, 8),
+                    date = Date(2018, 2, 9),
                     type = "ATP500",
                     drawsize = 16
-                ),
-                Tournament(
+                ),Tournament(
                     name = "Rio Open",
-                    date = Date(2018, 2, 19),
+                    date = Date(2018, 2, 16),
                     type = "ATP500",
                     drawsize = 16
-                ),
-                Tournament(
+                ),Tournament(
                     name = "Dubai Tennis Championships",
-                    date = Date(2018, 2, 26),
+                    date = Date(2018, 2, 23),
                     type = "ATP500",
                     drawsize = 16
-                ),
-                Tournament(
+                ),Tournament(
                     name = "Mexican Open",
-                    date = Date(2018, 2, 26),
+                    date = Date(2018, 2, 23),
                     type = "ATP500",
                     drawsize = 16
-                ),
-                Tournament(
+                ),Tournament(
                     name = "Barcelona Open",
-                    date = Date(2018, 4, 23),
+                    date = Date(2018, 4, 20),
                     type = "ATP500",
                     drawsize = 16
-                ),
-                Tournament(
+                ),Tournament(
                     name = "Queen's Club Championships",
-                    date = Date(2018, 3, 8),
+                    date = Date(2018, 6, 15),
                     type = "ATP500",
                     drawsize = 16
-                ),
-                Tournament(
+                ),Tournament(
                     name = "Halle Open",
-                    date = Date(2018, 6, 18),
+                    date = Date(2018, 6, 15),
                     type = "ATP500",
                     drawsize = 32
-                ),
-                Tournament(
-                    name = "Hamburg European Open",
-                    date = Date(2018, 7, 23),
+                ),Tournament(
+                    name = "German Open",
+                    date = Date(2018, 7, 27),
                     type = "ATP500",
                     drawsize = 16
-                ),
-                Tournament(
+                ),Tournament(
                     name = "Washington Open",
-                    date = Date(2018, 7, 30),
+                    date = Date(2018, 8, 3),
                     type = "ATP500",
                     drawsize = 16
-                ),
-                Tournament(
+                ),Tournament(
                     name = "China Open",
-                    date = Date(2018, 10, 1),
+                    date = Date(2018, 10, 5),
                     type = "ATP500",
                     drawsize = 16
-                ),
-                Tournament(
+                ),Tournament(
                     name = "Japan Open",
-                    date = Date(2018, 10, 1),
+                    date = Date(2018, 10, 5),
                     type = "ATP500",
                     drawsize = 16
-                ),
-                Tournament(
+                ),Tournament(
                     name = "Vienna Open",
-                    date = Date(2018, 10, 22),
+                    date = Date(2018, 10, 19),
                     type = "ATP500",
                     drawsize = 16
-                ),
-                Tournament(
+                ),Tournament(
                     name = "Swiss Indoors",
-                    date = Date(2018, 10, 22),
+                    date = Date(2018, 10, 26),
                     type = "ATP500",
                     drawsize = 16
                 ),
@@ -235,13 +212,214 @@ function generate_doubles_tournaments(
     end
 
     if ATP250 == true
+        append!(
+            tournaments,
+            [
+                Tournament(
+                    name = "Brisbane International",
+                    date = Date(2018, 1, 5),
+                    type = "ATP250",
+                    drawsize = 16
+                ),Tournament(
+                    name = "Maharashtra Open",
+                    date = Date(2018, 1, 5),
+                    type = "ATP250",
+                    drawsize = 16
+                ),Tournament(
+                    name = "Qatar Open",
+                    date = Date(2018, 1, 5),
+                    type = "ATP250",
+                    drawsize = 16
+                ),Tournament(
+                    name = "Auckland Open",
+                    date = Date(2018, 1, 12),
+                    type = "ATP250",
+                    drawsize = 16
+                ),Tournament(
+                    name = "Sydney International",
+                    date = Date(2018, 1, 12),
+                    type = "ATP250",
+                    drawsize = 16
+                ),Tournament(
+                    name = "Open Sud de France",
+                    date = Date(2018, 2, 2),
+                    type = "ATP250",
+                    drawsize = 16
+                ),Tournament(
+                    name = "Brasil Open",
+                    date = Date(2018, 2, 9),
+                    type = "ATP250",
+                    drawsize = 16
+                ),Tournament(
+                    name = "Delray Beach Open",
+                    date = Date(2018, 2, 16),
+                    type = "ATP250",
+                    drawsize = 16
+                ),Tournament(
+                    name = "Open 13",
+                    date = Date(2018, 2, 16),
+                    type = "ATP250",
+                    drawsize = 16
+                ),Tournament(
+                    name = "Argentina Open",
+                    date = Date(2018, 2, 23),
+                    type = "ATP250",
+                    drawsize = 16
+                ),Tournament(
+                    name = "Grand Prix Hassan II",
+                    date = Date(2018, 4, 6),
+                    type = "ATP250",
+                    drawsize = 16
+                ),Tournament(
+                    name = "US Men's Clay Court Championship",
+                    date = Date(2018, 4, 6),
+                    type = "ATP250",
+                    drawsize = 16
+                ),Tournament(
+                    name = "Bavaria Open",
+                    date = Date(2018, 4, 27),
+                    type = "ATP250",
+                    drawsize = 16
+                ),Tournament(
+                    name = "Estoril Open",
+                    date = Date(2018, 4, 27),
+                    type = "ATP250",
+                    drawsize = 16
+                ),Tournament(
+                    name = "Geneva Open",
+                    date = Date(2018, 5, 19),
+                    type = "ATP250",
+                    drawsize = 16
+                ),Tournament(
+                    name = "Rosmalen Open",
+                    date = Date(2018, 6, 8),
+                    type = "ATP250",
+                    drawsize = 16
+                ),Tournament(
+                    name = "Stuttgart Open",
+                    date = Date(2018, 6, 8),
+                    type = "ATP250",
+                    drawsize = 16
+                ),Tournament(
+                    name = "Eastbourne International",
+                    date = Date(2018, 6, 21),
+                    type = "ATP250",
+                    drawsize = 16
+                ),Tournament(
+                    name = "Mallorca Open",
+                    date = Date(2018, 6, 19),
+                    type = "ATP250",
+                    drawsize = 16
+                ),Tournament(
+                    name = "Hall of Fame Open",
+                    date = Date(2018, 7, 13),
+                    type = "ATP250",
+                    drawsize = 16
+                ),Tournament(
+                    name = "Swedish Open",
+                    date = Date(2018, 7, 20),
+                    type = "ATP250",
+                    drawsize = 16
+                ),Tournament(
+                    name = "Croatia Open",
+                    date = Date(2018, 7, 20),
+                    type = "ATP250",
+                    drawsize = 16
+                ),Tournament(
+                    name = "Atlanta Open",
+                    date = Date(2018, 7, 27),
+                    type = "ATP250",
+                    drawsize = 16
+                ),Tournament(
+                    name = "Swiss Open",
+                    date = Date(2018, 7, 27),
+                    type = "ATP250",
+                    drawsize = 16
+                ),Tournament(
+                    name = "Austrian Open",
+                    date = Date(2018, 8, 3),
+                    type = "ATP250",
+                    drawsize = 16
+                ),Tournament(
+                    name = "Winston-Salem Open",
+                    date = Date(2018, 8, 24),
+                    type = "ATP250",
+                    drawsize = 16
+                ),Tournament(
+                    name = "Moselle Open",
+                    date = Date(2018, 9, 21),
+                    type = "ATP250",
+                    drawsize = 16
+                ),Tournament(
+                    name = "Shenzhen Open",
+                    date = Date(2018, 9, 24),
+                    type = "ATP250",
+                    drawsize = 16
+                ),Tournament(
+                    name = "Stockholm Open",
+                    date = Date(2018, 10, 19),
+                    type = "ATP250",
+                    drawsize = 16
+                ),Tournament(
+                    name = "Kremlin Cup",
+                    date = Date(2018, 10, 19),
+                    type = "ATP250",
+                    drawsize = 16
+                )
+            ]
+        )
     end
 
     if ATPChallenger == true
+        append!(
+            tournaments,
+            map((index) -> Tournament(
+                name = "Challenger125 $index",
+                date = Date(2018, 1, 1),
+                type = "ATPChallenger125",
+                drawsize = 32
+                ), 1:25)
+        )
+        append!(
+            tournaments,
+            map((index) -> Tournament(
+                name = "Challenger110 $index",
+                date = Date(2018, 1, 1),
+                type = "ATPChallenger110",
+                drawsize = 32
+                ), 1:12)
+        )
+        append!(
+            tournaments,
+            map((index) -> Tournament(
+                name = "Challenger100 $index",
+                date = Date(2018, 1, 1),
+                type = "ATPChallenger100",
+                drawsize = 32
+                ), 1:19)
+        )
+        append!(
+            tournaments,
+            map((index) -> Tournament(
+                name = "Challenger90 $index",
+                date = Date(2018, 1, 1),
+                type = "ATPChallenger90",
+                drawsize = 32
+                ), 1:91)
+        )
     end
 
     if ITFWorldTennisTour == true
+        append!(
+            tournaments,
+            map((index) -> Tournament(
+                name = "ITF $index",
+                date = Date(2018, 1, 1),
+                type = "ITFWorldTennisTour25k",
+                drawsize = 32
+            ), 1:550)
+        )
     end
-
+    
     return tournaments
 end

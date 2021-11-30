@@ -38,7 +38,8 @@ end
     function execute_bracket(
         current_bracket::Union{Vector{Any}, Vector{Team}, Team},
         tournament::Tournament,
-        round::Int64
+        round::Int64,
+        strength_method::String
     )::Team
 
 Simulates a tournament bracket.
@@ -51,18 +52,37 @@ Arguments
     the current tournament being played.
 - `round`:
     the current round being played.
+- `strength_method`:
+    method used for determing probability team 1 beats team 2.
 """
 
 function execute_bracket(
     current_bracket::Union{Vector{Any}, Vector{Team}, Team},
     tournament::Tournament,
-    round::Int64
+    round::Int64,
+    strength_method::String
 )::Team
     if isa(current_bracket, Vector) == false
         return current_bracket
     end
-    team1 = execute_bracket(current_bracket[1], tournament, round * 2)
-    team2 = execute_bracket(current_bracket[2], tournament, round * 2)
-    winning_team = play_doubles_match(team1, team2, tournament, round)
+    team1 = execute_bracket(
+        current_bracket[1], 
+        tournament, 
+        round * 2, 
+        strength_method
+    )
+    team2 = execute_bracket(
+        current_bracket[2], 
+        tournament, 
+        round * 2, 
+        strength_method
+    )
+    winning_team = play_doubles_match(
+        team1, 
+        team2, 
+        tournament, 
+        round, 
+        strength_method
+    )
     return winning_team
 end

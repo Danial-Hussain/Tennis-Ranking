@@ -1,7 +1,7 @@
 """
     function atp_ranking(
         players::Vector{Player},
-        completed_tournament_date::Date
+        ranking_scheme_to_update::String
     )
 
 Update the player's rankings using ATP Ranking system.
@@ -11,10 +11,13 @@ Arguments
 - `players`:
     an array of players in the simulation.
 - `ranking_scheme_to_update`:
-    the name of the ranking scheme to update.
+    the name of the ranking scheme to update for each Player.
 """
 
-function atp_ranking(players::Vector{Player}, ranking_scheme_to_update::String)
+function atp_ranking(
+    players::Vector{Player}, 
+    ranking_scheme_to_update::String
+)
     ordered_ranking = []
     for player in players
         point_total = 0
@@ -33,14 +36,11 @@ function atp_ranking(players::Vector{Player}, ranking_scheme_to_update::String)
         end
         sort!(top6_results, rev = true)
         point_total += sum(top6_results[1:min(length(top6_results), 6)])
-        push!(ordered_ranking, (point_total, player))
-    end
-    sort!(ordered_ranking, by = value -> value[1], rev = true)
-    for (index, value) in enumerate(ordered_ranking)
-        value[2].rankings[ranking_scheme_to_update] = index
+        player.rankings[ranking_scheme_to_update] = point_total
     end
     return nothing
 end
+
 
 """
     function compute_points(
@@ -58,7 +58,10 @@ Arguments
     the type of the tournament. Ex: Grandslam
 """
 
-function compute_points(result::String, tournament_type::String)::Int64
+function compute_points(
+    result::String, 
+    tournament_type::String
+)::Int64
     if tournament_type == "Grandslam"
         return ATPGrandSlamDoublesPoints[result]
     elseif tournament_type == "ATPNitto"
